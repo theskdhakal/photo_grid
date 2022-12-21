@@ -67,7 +67,6 @@ h1 {
   background: url(img/1.jpg) no-repeat center center;
   background-size: cover;
 }
-/* animation  */
 
 .item-2 {
   grid-area: item-2;
@@ -140,11 +139,12 @@ h1 {
   transform: scale(1.2);
   cursor: pointer;
 
-  /* animation: glow 3s; */
-  transition: 2s ease;
+  transition: 2s ease-in-out;
+
+  animation: glow 3s, move 0s;
 }
 
-/* @keyframes glow {
+@keyframes glow {
   from {
     box-shadow: 0 0 20px -10px rgb(159, 190, 60);
   }
@@ -152,4 +152,4 @@ h1 {
   to {
     box-shadow: 0 0 10px 10px rgb(200, 93, 195);
   }
-} */
+}
