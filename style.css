@@ -11,29 +11,33 @@ html {
 h1 {
   font-size: 3rem;
   text-align: center;
-  margin: 10px 0;
+  margin: 1px 0;
   font-family: "Lucida Handwriting", cursive;
-  color: skyblue;
+  color: blue;
   animation: slide 5s ease 2 alternate;
+  background: rgba(72, 72, 64, 0.681);
+  border-radius: 90px;
 }
 
 @keyframes slide {
   from {
-    color: skyblue;
+    color: blue;
   }
   to {
-    color: red;
+    color: rgb(216, 118, 20);
   }
 }
 .wrapper {
-  padding: 5rem;
+  padding: 1rem;
   height: 100vh;
   display: grid;
   gap: 5px;
   margin-bottom: 10px;
+  background: rgba(46, 127, 46, 0.595);
+  border-radius: 40px;
 
-  grid-template-columns: auto;
-  grid-template-rows: auto;
+  grid-template-columns: repeat(auto);
+
   grid-template-areas:
     "item-1 item-2 item-3"
     "item-4 item-2 item-9 "
@@ -136,7 +140,7 @@ h1 {
 }
 
 .wrapper > div:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   cursor: pointer;
 
   transition: 2s ease-in-out;
@@ -151,5 +155,41 @@ h1 {
 
   to {
     box-shadow: 0 0 10px 10px rgb(200, 93, 195);
+  }
+}
+
+/* for laptop screen  */
+@media (max-width: 1224px) {
+  .wrapper {
+    height: 150vh;
+    grid-template-columns: 50% 50%;
+
+    grid-template-areas:
+      "item-1 item-2 "
+      "item-3 item-4 "
+      "item-5 item-5"
+      "item-7 item-10"
+      "item-9 item-10"
+      "item-8 item-6";
+  }
+}
+
+/* for mobile screen  */
+@media (max-width: 750px) {
+  .wrapper {
+    height: 180vh;
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+      "item-1"
+      "item-2"
+      "item-3"
+      "item-4"
+      "item-5"
+      "item-6"
+      "item-7"
+      "item-8"
+      "item-9"
+      "item-10 ";
   }
 }
